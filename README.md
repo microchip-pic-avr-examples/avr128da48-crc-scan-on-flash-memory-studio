@@ -32,8 +32,8 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 In this example,
 * Srec_cat tool which comes with Studio IDE is used to pre-calculate CRC checksum and to store the calculated checksum in specific address of Flash. Pre-calculated CRC checksum is stored in the last section of the Flash memory.
 
-	**Note :**  * For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
-                    * For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
+	**Note :**  *	For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
+                    *	For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
 
 * Flash memory is divided into three sections : Boot Code section, Application Code section and Application Data section. In this example the application program is loaded into the APPCODE section of the Flash memory and starts at the address 0x00400.
 * The CRCSCAN can be set up to scan the entire Flash, only the boot section, or both the boot and application code sections. In this example CRCSCAN is set up to scan the whole Flash memory .
@@ -55,7 +55,7 @@ alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>
 ***Fig 2 : Application Code Flow diagram***
 
 <p align="center">
-  <img width=400 height=auto src="https://i.imgur.com/ALiM3Sp.jpg">
+  <img width=400 height=auto src="https://i.imgur.com/xhavA5r.jpg">
 </p>
 
 ## Software Used
@@ -68,7 +68,7 @@ alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>
 
 ## Hardware used
 
-* AVR128DA48 Curiosity Nano Evaluation Kit [Part Number:DM164151](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164151 "Part Number:DM164151")
+* AVR128DA48 Curiosity Nano Evaluation Kit [[Part Number:DM164151]](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164151 "[Part Number:DM164151]")
 
 ***Fig 3 : AVR128DA48 Curiosity Nano Evaluation Kit***
 
@@ -131,7 +131,7 @@ Note : For 32-bit CRC , Configure **CRCSEL** bit in **SYSCFG0** register to **En
 
 10.	Save As window pops up , enter the file name, for example : crc16 saved in .elf format as shown in Fig 9 , which includes Fuses configuration in this file.
 
-***Fig 9 : Save As window ***
+***Fig 9 : Save As window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/13a7Gg9.jpg">
 </p>
@@ -158,28 +158,28 @@ Note : Alternately, open the Data Visualizer plugin extension available to Studi
 
 ***Fig 12 : Initial status on Terminal window.***
 <p align="center">
-  <img width=auto height=auto src="images/dv1.png">
+  <img width=auto height=auto src="https://i.imgur.com/m23dXzZ.jpg">
 </p>
 
 3.CRCSCAN starts after 8 sec. Status is printed on terminal window as shown in Fig 13.
 
 ***Fig 13 : CRCSCAN status on Terminal window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/z9fJ7RQ.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/MwBVTIJ.jpg">
 </p>
 
 4. Press Switch (SW0) to change a byte at location “0x1FC01”in the Flash memory to 0x00 as shown in Fig 14.
 
 ***Fig 14 : Switch press event***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/pN83ZVS.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/A4IUAeO.jpg">
 </p>
 
 5.	Subsequent CRC scan will result in a CRC failure as shown in Fig 15 and LED0 on AVR DA Curiosity Nano board turns ON.
 
 ***Fig 15 : Subsequent scan result on Terminal window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/V3Cy45h.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/Psj7jT0.jpg">
 </p>
 
 6.	Press Switch (SW0) again to change data back to 0XFF, at location “0x1FC01”in the Flash memory as shown in Fig 16.
@@ -193,7 +193,7 @@ Note : Alternately, open the Data Visualizer plugin extension available to Studi
 
 ***Fig 17 : Subsequent scan result on terminal window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/yNfuTEL.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/6zsROFT.jpg">
 </p>
 
 **Note:** Clean the project before programming the   _crc.hex file as explained in Device Programming section.
