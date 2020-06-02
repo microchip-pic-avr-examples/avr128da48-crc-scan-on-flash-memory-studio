@@ -25,13 +25,14 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/yWDHmW6.jpg">
-  <br>**Fig 1:Block diagram view of the system used for CRCSCAN on Flash memory**<br>
+  <br><strong>Fig 1:Block diagram view of the system used for CRCSCAN on Flash memory<br>
 </p>
 
 In this example,
 * Srec_cat tool which comes with Studio IDE is used to pre-calculate CRC checksum and to store the calculated checksum in specific address of Flash. Pre-calculated CRC checksum is stored in the last section of the Flash memory.
 
-	**Note :**    *		For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
+	**Note :**    
+                      *		For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
                       *		For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
 
 * Flash memory is divided into three sections : Boot Code section, Application Code section and Application Data section. In this example the application program is loaded into the APPCODE section of the Flash memory and starts at the address 0x00400.
@@ -51,10 +52,9 @@ alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>
 
 ## Application Code Flow Diagram
 
-***Fig 2 : Application Code Flow diagram***
-
 <p align="center">
   <img width=400 height=auto src="https://i.imgur.com/xhavA5r.jpg">
+  <br><strong>Fig 2 : Application Code Flow diagram<br>
 </p>
 
 ## Software Used
@@ -69,10 +69,10 @@ alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>
 
 * AVR128DA48 Curiosity Nano Evaluation Kit [[Part Number:DM164151]](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/DM164151 "[Part Number:DM164151]")
 
-***Fig 3 : AVR128DA48 Curiosity Nano Evaluation Kit***
 
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/YU5dx3c.jpg">
+  <br><strong>Fig 3 : AVR128DA48 Curiosity Nano Evaluation Kit<br>
 </p>
 
 # Hardware setup
@@ -85,12 +85,13 @@ Connect AVR128DA48 Curiosity Nano board to Host Computer (PC) using standard mic
 2.	Open the CRCSCAN on Flash Memory project. (File->Open Project).
 3.	The pre-calculated CRC checksum using Srec_cat tool (which is a part of the Studio IDE) is stored at the end of the Flash memory. This is achieved by adding the following command in **post-build command section** of the project in Atmel Studio IDE. To open build event command line window, navigate to **“Project->Properties->Build Events->Post-build event command line”** as shown in Fig 4 . For more details about the post-build command, refer post-build command explanation section below.
 
-***Fig 4 : Post-build event command line window for 16-bit CRC***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/9bcV2UQ.jpg">
+  <br><strong>Fig 4 : Post-build event command line window for 16-bit CRC<br>
 </p>
 
 **Note** : For 32-bit CRC use the following post-build command.
+
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/SzLIgYc.jpg">
 </p>
@@ -100,47 +101,47 @@ Command : ![](https://i.imgur.com/Y7uOhtq.jpg)
 
 This command keeps the application code at 0x400 location in the Flash memory. It is the start address of APPCODE section of Flash.
 
-***Fig 5 : Memory settings window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/pv3Odjt.jpg">
+  <br><strong>Fig 5 : Memory settings window<br>
 </p>
 
 5.	Build the solution by clicking on ![](https://i.imgur.com/vP08CUn.jpg) **Build** icon and make sure build is successful without any errors.
 6.	Go to Fuses tab and Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC16** and **CRCSRC** bit in **SYSCFG0** register to **CRC OF FULL FLASH**  as shown in Fig 6 and click on **Program** . 
 Note : For 32-bit CRC , Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC32**.
 
-***Fig 6 : Fuses configuration***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/5iM3Upp.jpg">
+  <br><strong>Fig 6 : Fuses configuration<br>
 </p>
 
 7.	Go to Tools -> Device Programming.
 8.	Select the Tool and click Apply as shown in Fig 7.
 
-***Fig 7 : Tool selecting window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/g2PzawJ.jpg">
+  <br><strong>Fig 7 : Tool selecting window<br>
 </p>
 
 9.	Go to Production file tab and browse the _crc.hex file from the project folder by clicking on browse(…) button in Flash as shown in Fig 8. Check the Flash and Fuses option and click on Save button.
 
-***Fig 8 : Device programming window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/xAjNKt8.jpg">
+   <br><strong>Fig 8 : Device programming window<br>
 </p>
 
 10.	Save As window pops up , enter the file name, for example : crc16 saved in .elf format as shown in Fig 9 , which includes Fuses configuration in this file.
 
-***Fig 9 : Save As window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/dR7pcDC.jpg">
+  <br><strong>Fig 9 : Save As window<br>
 </p>
 
 11.	Go to Production file tab and browse the crc16.elf file ,which is saved in Debug folder of the project by clicking on browse(…) option as shown in Fig 10. Check the Flash and Fuses option and click on Program button.
 
-***Fig 10 : Device programming window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/9Hngmgu.jpg">
+  <br><strong>Fig 10 : Device programming window<br>
 </p>
 
 # Demo Operation:
