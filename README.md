@@ -32,8 +32,8 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 In this example,
 * Srec_cat tool which comes with Studio IDE is used to pre-calculate CRC checksum and to store the calculated checksum in specific address of Flash. Pre-calculated CRC checksum is stored in the last section of the Flash memory.
 
-	**Note :**  *	For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
-                    *	For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
+	**Note :**    *		For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
+                      *		For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
 
 * Flash memory is divided into three sections : Boot Code section, Application Code section and Application Data section. In this example the application program is loaded into the APPCODE section of the Flash memory and starts at the address 0x00400.
 * The CRCSCAN can be set up to scan the entire Flash, only the boot section, or both the boot and application code sections. In this example CRCSCAN is set up to scan the whole Flash memory .
@@ -88,59 +88,60 @@ Connect AVR128DA48 Curiosity Nano board to Host Computer (PC) using standard mic
 
 ***Fig 4 : Post-build event command line window for 16-bit CRC***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/Nsawjb9.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/9bcV2UQ.jpg">
 </p>
 
 **Note** : For 32-bit CRC use the following post-build command.
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/jhOFdW1.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/SzLIgYc.jpg">
 </p>
 4.	In this example the application program is loaded into the APPCODE section. This is achieved by adding command **“.text=0x200”** value in Flash segment section of the project in Atmel Studio IDE. To open Flash segment window, navigate to **“Project->Properties->Toolchain->AVR/GNU Linker->Memory Settings->Flash segment”** as shown in Fig 5.
 
-Command : ![](https://i.imgur.com/LQmt693.jpg)
+Command : ![](https://i.imgur.com/Y7uOhtq.jpg)
 
 This command keeps the application code at 0x400 location in the Flash memory. It is the start address of APPCODE section of Flash.
 
 ***Fig 5 : Memory settings window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/YCvbmQD.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/pv3Odjt.jpg">
 </p>
 
-5.	Build the solution by clicking on ![](https://i.imgur.com/Hl7uIsM.jpg) **Build** icon and make sure build is successful without any errors.
+5.	Build the solution by clicking on ![](https://i.imgur.com/vP08CUn.jpg) **Build** icon and make sure build is successful without any errors.
 6.	Go to Fuses tab and Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC16** and **CRCSRC** bit in **SYSCFG0** register to **CRC OF FULL FLASH**  as shown in Fig 6 and click on **Program** . 
 Note : For 32-bit CRC , Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC32**.
 
 ***Fig 6 : Fuses configuration***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/hGvBqcj.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/5iM3Upp.jpg">
 </p>
 
 7.	Go to Tools -> Device Programming.
 8.	Select the Tool and click Apply as shown in Fig 7.
+
 ***Fig 7 : Tool selecting window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/JYxWcVh.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/g2PzawJ.jpg">
 </p>
 
 9.	Go to Production file tab and browse the _crc.hex file from the project folder by clicking on browse(…) button in Flash as shown in Fig 8. Check the Flash and Fuses option and click on Save button.
 
 ***Fig 8 : Device programming window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/VTxQJZC.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/xAjNKt8.jpg">
 </p>
 
 10.	Save As window pops up , enter the file name, for example : crc16 saved in .elf format as shown in Fig 9 , which includes Fuses configuration in this file.
 
 ***Fig 9 : Save As window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/13a7Gg9.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/dR7pcDC.jpg">
 </p>
 
 11.	Go to Production file tab and browse the crc16.elf file ,which is saved in Debug folder of the project by clicking on browse(…) option as shown in Fig 10. Check the Flash and Fuses option and click on Program button.
 
 ***Fig 10 : Device programming window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/Qfqnenv.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/9Hngmgu.jpg">
 </p>
 
 # Demo Operation:
@@ -151,7 +152,7 @@ Note : Alternately, open the Data Visualizer plugin extension available to Studi
 
 ***Fig 11 : Standalone Data Visualizer window***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/YCit6iU.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/b8hx6Xf.jpg">
 </p>
 
 2 .Once programming is completed, terminal window starts displaying the messages as shown in Fig 12.
@@ -202,7 +203,7 @@ Note : Alternately, open the Data Visualizer plugin extension available to Studi
 
 ### Post-build command for 16-bit CRC
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/LqCLPNj.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/Ua4wWUB.jpg">
 </p>
 
 This post build command takes the generated HEX file **($(OutputDirectory)\$(OutputFileName).hex)** and fills the remaining space of Flash with 0xFF    **(-fill 0xFF 0 0x1FFFE)** . The “**CRC16_Big_Endian**” polynomial is used which generates a 16-bit CRC checksum of the data, stored in big-endian order at the specified address starts at **0x1FFFE**. **“-broken”** option is a common-but-broken calculation is performed and the initial seed is 0x84CF. **"-crop"** option is used to isolate a particular section of the data and discard the rest.**"-intel"** option says to use the Intel hex format to read the hex file. The _crc.hex file is generated , where calculated CRC checksum is appended at the specified address of the Flash ( CRC checksum is stored at location 0x1FFFE and 0x1FFFF in Flash). 
@@ -212,7 +213,7 @@ http://srecord.sourceforge.net/man/man1/srec_input.html
 
 ### Post-build command for 32-bit CRC
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/GVsRXfk.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/SzLIgYc.jpg">
 </p>
 
 # Summary : 
