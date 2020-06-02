@@ -150,51 +150,52 @@ Note : For 32-bit CRC , Configure **CRCSEL** bit in **SYSCFG0** register to **En
 
 Note : Alternately, open the Data Visualizer plugin extension available to Studio IDE.  
 
-***Fig 11 : Standalone Data Visualizer window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/b8hx6Xf.jpg">
+  <br><strong>Fig 11 : Standalone Data Visualizer window<br>
 </p>
 
 2 .Once programming is completed, terminal window starts displaying the messages as shown in Fig 12.
 
-***Fig 12 : Initial status on Terminal window.***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/m23dXzZ.jpg">
+  <br><strong>Fig 12 : Initial status on Terminal window<br>
 </p>
 
 3.CRCSCAN starts after 8 sec. Status is printed on terminal window as shown in Fig 13.
 
-***Fig 13 : CRCSCAN status on Terminal window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/MwBVTIJ.jpg">
+  <br><strong>Fig 13 : CRCSCAN status on Terminal window<br>
 </p>
 
 4. Press Switch (SW0) to change a byte at location “0x1FC01”in the Flash memory to 0x00 as shown in Fig 14.
 
-***Fig 14 : Switch press event***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/A4IUAeO.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/T68tltV.jpg">
+  <br><strong>Fig 14 : Switch press event<br>
 </p>
 
 5.	Subsequent CRC scan will result in a CRC failure as shown in Fig 15 and LED0 on AVR DA Curiosity Nano board turns ON.
 
-***Fig 15 : Subsequent scan result on Terminal window***
+
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/Psj7jT0.jpg">
+  <br><strong>Fig 15 : Subsequent scan result on Terminal window<br>
 </p>
 
 6.	Press Switch (SW0) again to change data back to 0XFF, at location “0x1FC01”in the Flash memory as shown in Fig 16.
 
-***Fig 16 : Switch press event***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/A4IUAeO.jpg">
+  <br><strong>Fig 16 : Switch press event<br>
 </p>
 
 7.	Subsequent CRC scan will result in CRC success as shown in Fig 17 and LED0 on AVR DA Curiosity Nano board turns OFF.
 
-***Fig 17 : Subsequent scan result on terminal window***
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/6zsROFT.jpg">
+   <br><strong>Fig 17 : Subsequent scan result on terminal window<br>
 </p>
 
 **Note:** Clean the project before programming the   _crc.hex file as explained in Device Programming section.
