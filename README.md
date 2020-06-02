@@ -158,7 +158,7 @@ Note : Alternately, open the Data Visualizer plugin extension available to Studi
 
 ***Fig 12 : Initial status on Terminal window.***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/fTUt6DO.jpg">
+  <img width=auto height=auto src="images/dv1.png">
 </p>
 
 3.CRCSCAN starts after 8 sec. Status is printed on terminal window as shown in Fig 13.
