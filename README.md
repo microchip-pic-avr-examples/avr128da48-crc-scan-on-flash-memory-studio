@@ -187,7 +187,7 @@ Note : Alternately, open the Data Visualizer plugin extension available to Studi
 
 ***Fig 16 : Switch press event***
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/h9EaWg0.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/A4IUAeO.jpg">
 </p>
 
 7.	Subsequent CRC scan will result in CRC success as shown in Fig 17 and LED0 on AVR DA Curiosity Nano board turns OFF.
