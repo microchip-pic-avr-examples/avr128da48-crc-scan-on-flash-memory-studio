@@ -31,9 +31,8 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 In this example,
 * Srec_cat tool which comes with Studio IDE is used to pre-calculate CRC checksum and to store the calculated checksum in specific address of Flash. Pre-calculated CRC checksum is stored in the last section of the Flash memory.
 
-	**Note :**    
-               * For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
-               * For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
+        *	**Note :**  For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
+        *	For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
 
 * Flash memory is divided into three sections : Boot Code section, Application Code section and Application Data section. In this example the application program is loaded into the APPCODE section of the Flash memory and starts at the address 0x00400.
 * The CRCSCAN can be set up to scan the entire Flash, only the boot section, or both the boot and application code sections. In this example CRCSCAN is set up to scan the whole Flash memory .
@@ -46,8 +45,8 @@ In this example,
 ### To see the CRC SCAN on Flash memory demo operation video, click on the below image.
 
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=MuXe_AXPpC4
-" target="_blank"><img src="https://i.imgur.com/fQ9DhZV.jpg"
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Z_syAVUn_zY
+" target="_blank"><img src="https://i.imgur.com/Byj2h9N.jpg"
 alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>  
 
 ## Application Code Flow Diagram
@@ -219,5 +218,4 @@ http://srecord.sourceforge.net/man/man1/srec_input.html
 
 # Summary : 
 
-This example demonstrates how CRCSCAN peripheral can be used to perform integrity check on Flash memory. It also demonstrates use of NVMCTRL peripheral to perform read and write operations on Flash memory in run time. Appendix  section explains more about firmware generation using START used for this example., Frequency meter, DC motor control etc.
-
+This example demonstrates how CRCSCAN peripheral can be used to perform integrity check on Flash memory. It also demonstrates use of NVMCTRL peripheral to perform read and write operations on Flash memory in run time. 
