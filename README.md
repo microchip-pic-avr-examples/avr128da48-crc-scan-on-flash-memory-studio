@@ -24,7 +24,7 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 ## Demo Description
 
 <p align="center">
-  <img width=auto height=auto src="https://i.imgur.com/yWDHmW6.jpg">
+  <img width=auto height=auto src="https://i.imgur.com/xaXEoYo.jpg">
   <br><strong>Fig 1:Block diagram view of the system used for CRCSCAN on Flash memory<br>
 </p>
 
@@ -32,8 +32,8 @@ In this example,
 * Srec_cat tool which comes with Studio IDE is used to pre-calculate CRC checksum and to store the calculated checksum in specific address of Flash. Pre-calculated CRC checksum is stored in the last section of the Flash memory.
 
 	**Note :**    
-                      *		For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
-                      *		For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
+               * For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
+               * For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
 
 * Flash memory is divided into three sections : Boot Code section, Application Code section and Application Data section. In this example the application program is loaded into the APPCODE section of the Flash memory and starts at the address 0x00400.
 * The CRCSCAN can be set up to scan the entire Flash, only the boot section, or both the boot and application code sections. In this example CRCSCAN is set up to scan the whole Flash memory .
@@ -97,7 +97,7 @@ Connect AVR128DA48 Curiosity Nano board to Host Computer (PC) using standard mic
 </p>
 4.	In this example the application program is loaded into the APPCODE section. This is achieved by adding command **“.text=0x200”** value in Flash segment section of the project in Atmel Studio IDE. To open Flash segment window, navigate to **“Project->Properties->Toolchain->AVR/GNU Linker->Memory Settings->Flash segment”** as shown in Fig 5.
 
-Command : ![](https://i.imgur.com/Y7uOhtq.jpg)
+Command : ![](https://i.imgur.com/CBhTTTP.jpg)
 
 This command keeps the application code at 0x400 location in the Flash memory. It is the start address of APPCODE section of Flash.
 
@@ -115,8 +115,8 @@ Note : For 32-bit CRC , Configure **CRCSEL** bit in **SYSCFG0** register to **En
   <br><strong>Fig 6 : Fuses configuration<br>
 </p>
 
-7.	Go to Tools -> Device Programming.
-8.	Select the Tool and click Apply as shown in Fig 7.
+7.	Go to **Tools** -> **Device Programming**.
+8.	Select the Tool and click **Apply** as shown in Fig 7.
 
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/g2PzawJ.jpg">
