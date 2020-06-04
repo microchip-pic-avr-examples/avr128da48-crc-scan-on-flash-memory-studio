@@ -7,7 +7,7 @@ Cyclic Redundancy Check Memory Scan (CRCSCAN) peripheral  is a Core Independent 
 
 This example demonstrates usage of CRCSCAN peripheral to perform CRC operation on the Flash memory and Nonvolatile Memory Controller (NVMCTRL) peripheral to perform read and write operations on the Flash memory in runtime.
 
-**Note:** This example is valid for all the AVR DA family MCUs.
+**Note:** *This example is valid for all the AVR DA family MCUs*.
 
 ##### To see the CRC SCAN on Flash memory demo operation video, click on the below image.
 
@@ -88,9 +88,9 @@ Connect AVR128DA48 Curiosity Nano board to Host Computer (PC) using standard mic
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/SzLIgYc.jpg">
 </p>
-4.	In this example the application program is loaded into the APPCODE section. This is achieved by adding command **".text=0x200"** value in Flash segment section of the project in Atmel Studio IDE. To open Flash segment window, navigate to **"Project->Properties->Toolchain->AVR/GNU Linker->Memory Settings->Flash segment"** as shown in Fig 5.
+4.	In this example the application program is loaded into the APPCODE section. This is achieved by adding command ".**text=0x200**" value in Flash segment section of the project in Atmel Studio IDE. To open Flash segment window, navigate to **"Project->Properties->Toolchain->AVR/GNU Linker->Memory Settings->Flash segment"** as shown in Fig 5.
 
-Command : ![](https://i.imgur.com/CBhTTTP.jpg)
+**Command** : ![](https://i.imgur.com/CBhTTTP.jpg)
 
 This command keeps the application code at 0x400 location in the Flash memory. It is the start address of APPCODE section of Flash.
 
@@ -101,7 +101,7 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 
 5.	Build the solution by clicking on ![](https://i.imgur.com/vP08CUn.jpg) **Build** icon and make sure build is successful without any errors.
 6.	Go to Fuses tab and Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC16** and **CRCSRC** bit in **SYSCFG0** register to **CRC OF FULL FLASH**  as shown in Fig 6 and click on **Program** . 
-Note : For **32-bit CRC** , Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC32**.
+**Note** : For **32-bit CRC** , Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC32**.
 
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/5iM3Upp.jpg">
@@ -141,7 +141,7 @@ Note : For **32-bit CRC** , Configure **CRCSEL** bit in **SYSCFG0** register to 
 
 1.	Open Standalone Data Visualizer. Select Virtual COM Port to which AVR DA Curiosity Nano board is connected as shown in Fig 11. Click on Connect. 
 
-Note : Alternately, open the Data Visualizer plugin extension available to Studio IDE.  
+**Note** : Alternately, open the Data Visualizer plugin extension available to Studio IDE.  
 
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/b8hx6Xf.jpg">
