@@ -11,8 +11,11 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 
 **1.	 This example could be generated with all the pin variants of AVR DA family of microcontrollers.**
 
-**To see the CRC SCAN on Flash memory demo operation video, click on the below image.**
-<br><a href="https://youtu.be/Z_syAVUn_zY" rel="nofollow"><img src="images/youtube.png" alt="AVR DA" width="500"/></a>
+##### To see the CRC SCAN on Flash memory demo operation video, click on the below image.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=Z_syAVUn_zY
+" target="_blank"><img src="https://i.imgur.com/yJeAEZ8.png"
+alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>  
 
 ## Useful Links
 
@@ -40,14 +43,6 @@ In this example,
 * Depending on the comparison result, the corresponding CRCSCAN status is printed on the terminal window. 
 * Upon switch press event, one-byte data is written into the APPDATA section of the Flash memory at the address 0x1FC01 using NVMCTRL peripheral, which results to CRC failure in subsequent CRC scan and LED turns ON.
 * Nonvolatile Memory Controller (NVMCTRL) peripheral is used to perform read and write operation on Flash memory in runtime.
-
-
-#### To see the CRC SCAN on Flash memory demo operation video, click on the below image.
-
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Z_syAVUn_zY
-" target="_blank"><img src="https://i.imgur.com/Byj2h9N.jpg"
-alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>  
 
 ## Application Code Flow Diagram
 
