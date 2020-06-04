@@ -88,7 +88,7 @@ Connect AVR128DA48 Curiosity Nano board to Host Computer (PC) using standard mic
 <p align="center">
   <img width=auto height=auto src="https://i.imgur.com/SzLIgYc.jpg">
 </p>
-4.	In this example the application program is loaded into the APPCODE section. This is achieved by adding command **“.text=0x200”** value in Flash segment section of the project in Atmel Studio IDE. To open Flash segment window, navigate to **“Project->Properties->Toolchain->AVR/GNU Linker->Memory Settings->Flash segment”** as shown in Fig 5.
+4.	In this example the application program is loaded into the APPCODE section. This is achieved by adding command “.text=0x200” value in Flash segment section of the project in Atmel Studio IDE. To open Flash segment window, navigate to <strong>“Project->Properties->Toolchain->AVR/GNU Linker->Memory Settings->Flash segment” as shown in Fig 5.
 
 **Command** : ![](https://i.imgur.com/CBhTTTP.jpg)
 
