@@ -11,7 +11,8 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 
 **1.	 This example could be generated with all the pin variants of AVR DA family of microcontrollers.**
 
-**2.	 This example is also generated using MPLAB X IDE and is available on GitHub at this location :** https://github.com/microchip-pic-avr-examples/avr128da48-crc-scan-on-flash-memory-mplab.git
+**To see the CRC SCAN on Flash memory demo operation video, click on the below image.**
+<br><a href="https://youtu.be/Z_syAVUn_zY" rel="nofollow"><img src="images/youtube.png" alt="AVR DA" width="500"/></a>
 
 ## Useful Links
 
@@ -30,8 +31,8 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 
 In this example,
 * Srec_cat tool which comes with Studio IDE is used to pre-calculate CRC checksum and to store the calculated checksum in specific address of Flash. Pre-calculated CRC checksum is stored in the last section of the Flash memory.
-- **Note :**  For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
-- For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
+   - **Note** :  For 16-bit CRC, two bytes checksum is generated and stored at the address 0x1FFFE and 0x1FFFF.
+   - For 32-bit CRC, four bytes checksum is generated and stored at the address 0x1FFFC to 0x1FFFF.
 
 * Flash memory is divided into three sections : Boot Code section, Application Code section and Application Data section. In this example the application program is loaded into the APPCODE section of the Flash memory and starts at the address 0x00400.
 * The CRCSCAN can be set up to scan the entire Flash, only the boot section, or both the boot and application code sections. In this example CRCSCAN is set up to scan the whole Flash memory .
