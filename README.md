@@ -100,7 +100,8 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 </p>
 
 5.	Build the solution by clicking on ![](https://i.imgur.com/vP08CUn.jpg) **Build** icon and make sure build is successful without any errors.
-6.	Go to Fuses tab and Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC16** and **CRCSRC** bit in **SYSCFG0** register to **CRC OF FULL FLASH**. Configure **BOOTSIZE** register to **0x02** value and **CODESIZE** register to **0XFE** value as shown in Fig 6 and click on **Program** . 
+6.	Go to Fuses tab and Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC16** and **CRCSRC** bit in **SYSCFG0** register to **CRC OF FULL FLASH**. Configure **BOOTSIZE** register to **0x02** value and **CODESIZE** register to **0XFE** value as shown in Fig 6 and click on **Program** .
+ 
 **Note** : For **32-bit CRC** , Configure **CRCSEL** bit in **SYSCFG0** register to **Enable CRC32**.
 
 <p align="center">
