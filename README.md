@@ -17,6 +17,9 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" />  
 </p>
 
+<br><a align="center">
+<as href="https://youtu.be/Z_syAVUn_zY" rel="nofollow"><img src="images/youtube.png" alt="AVR DA" width="500"/></a>
+
 ## Useful Links
 
 - [AVR128DA48 Product Page](https://www.microchip.com/wwwproducts/en/AVR128DA28 "AVR128DA48 Product Page")
