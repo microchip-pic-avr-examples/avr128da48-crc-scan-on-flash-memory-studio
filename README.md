@@ -11,8 +11,8 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 
 ##### To see the CRC SCAN on Flash memory demo operation video, click on the below image.
 
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=Z_syAVUn_zY
-" target="_blank"><img src="https://i.imgur.com/yJeAEZ8.png"
+<a align="centre" href="http://www.youtube.com/watch?feature=player_embedded&v=Z_syAVUn_zY
+" target="_blank"><img src="images/youtube.png"
 alt="IMAGE ALT TEXT HERE" width="500" height="300" border="10" /></a>  
 
 ## Useful Links
