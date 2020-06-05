@@ -85,11 +85,11 @@ Connect AVR128DA48 Curiosity Nano board to Host Computer (PC) using standard mic
 
 **Note** : For **32-bit CRC** use the following post-build command.
 
-`srec_cat "$(OutputDirectory)\$(OutputFileName).hex" -intel -fill 0xFF 0 0x1FFFC -crop 0 0x01FFFC -CRC32_Little_Endian 0x1FFFC -ccitt -o "$(OutputFileName)_crc.hex" -intel -line-length=44`
+`"srec_cat "$(OutputDirectory)\$(OutputFileName).hex" -intel -fill 0xFF 0 0x1FFFC -crop 0 0x01FFFC -CRC32_Little_Endian 0x1FFFC -ccitt -o "$(OutputFileName)_crc.hex" -intel -line-length=44"`
 
 4.	In this example the application program is loaded into the APPCODE section. This is achieved by adding command “.text=0x200” value in Flash segment section of the project in Atmel Studio IDE. To open Flash segment window, navigate to “Project->Properties->Toolchain->AVR/GNU Linker->Memory Settings->Flash segment” as shown in Fig 5.
 
-**Command** : `.text=0x200`
+**Command** : `".text=0x200"`
 
 This command keeps the application code at 0x400 location in the Flash memory. It is the start address of APPCODE section of Flash.
 
@@ -137,7 +137,7 @@ This command keeps the application code at 0x400 location in the Flash memory. I
   <br><strong>Fig 10 : Device programming window<br>
 </p>
 
-## Demo Operation:
+## Demo Operation
 
 1.	Open Standalone Data Visualizer. Select Virtual COM Port to which AVR DA Curiosity Nano board is connected as shown in Fig 11. Click on Connect. 
 
@@ -197,7 +197,7 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 
 ##### Post-build command for 16-bit CRC
 
-`srec_cat "$(OutputDirectory)\$(OutputFileName).hex" -intel -fill 0xFF 0 0x1FFFE -crop 0 0x01FFFE -CRC16_Big_Endian 0x1FFFE -broken -o "$(OutputFileName)_crc.hex" -intel -line-length=44`
+`"srec_cat "$(OutputDirectory)\$(OutputFileName).hex" -intel -fill 0xFF 0 0x1FFFE -crop 0 0x01FFFE -CRC16_Big_Endian 0x1FFFE -broken -o "$(OutputFileName)_crc.hex" -intel -line-length=44"`
 
 This post build command takes the generated HEX file **($(OutputDirectory)\$(OutputFileName).hex)** and fills the remaining space of Flash with 0xFF    **(-fill 0xFF 0 0x1FFFE)** . The “**CRC16_Big_Endian**” polynomial is used which generates a 16-bit CRC checksum of the data, stored in big-endian order at the specified address starts at **0x1FFFE**. **“-broken”** option is a common-but-broken calculation is performed and the initial seed is 0x84CF. **"-crop"** option is used to isolate a particular section of the data and discard the rest.**"-intel"** option says to use the Intel hex format to read the hex file. The _crc.hex file is generated , where calculated CRC checksum is appended at the specified address of the Flash ( CRC checksum is stored at location 0x1FFFE and 0x1FFFF in Flash). 
 
@@ -206,8 +206,8 @@ http://srecord.sourceforge.net/man/man1/srec_input.html
 
 ##### Post-build command for 32-bit CRC
 
-`srec_cat "$(OutputDirectory)\$(OutputFileName).hex" -intel -fill 0xFF 0 0x1FFFC -crop 0 0x01FFFC -CRC32_Little_Endian 0x1FFFC -ccitt -o "$(OutputFileName)_crc.hex" -intel -line-length=44`
+`"srec_cat "$(OutputDirectory)\$(OutputFileName).hex" -intel -fill 0xFF 0 0x1FFFC -crop 0 0x01FFFC -CRC32_Little_Endian 0x1FFFC -ccitt -o "$(OutputFileName)_crc.hex" -intel -line-length=44"`
 
-## Summary : 
+## Summary  
 
 This example demonstrates how CRCSCAN peripheral can be used to perform integrity check on Flash memory. It also demonstrates use of NVMCTRL peripheral to perform read and write operations on Flash memory in run time. 
