@@ -26,7 +26,7 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 ## Demo Description
 
 <p align="center">
-  <img width=400 height=auto src="images/Block_diagram.png">
+  <img width=800 height=auto src="images/Block_diagram.png">
   <br><strong>Fig 1:Block diagram view of the system used for CRCSCAN on Flash memory<br>
 </p>
 
