@@ -61,14 +61,14 @@
         "keywords": [
             "Flash",
             "CRC",
-			"16-bit CRC"
-			"32-bit CRC"
+			"16-bit CRC",
+			"32-bit CRC",
 			"LED",
 			"Switch",
 			"AVR DA",
 			"AVR128DA48",
-			"Curiosity Nano Evaluation Kit"
-			"Interrupt"	
+			"Curiosity Nano Evaluation Kit",
+			"Interrupt",	
         ],
 		"additionalData": {
 			"longDescription": {
