@@ -20,11 +20,11 @@
 		],
         "dfp": {
             "name": "AVR-Dx_DFP",
-            "semverRange": "1.2.56"
+            "semverRange": "^1.2.56"
         },
         "configurator": {
             "name": "START",
-            "semverRange": "1.7.391"
+            "semverRange": ">=1.7.391"
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -53,7 +53,7 @@
             ],
 			[
                "Peripherals", "GPIO"
-            ],
+            ]
         ],
         "peripherals": [
             "CRCSCAN","NVMCTRL","RTC","USART","GPIO"
@@ -68,7 +68,7 @@
 			"AVR DA",
 			"AVR128DA48",
 			"Curiosity Nano Evaluation Kit",
-			"Interrupt",	
+			"Interrupt"	
         ],
 		"additionalData": {
 			"longDescription": {
