@@ -27,7 +27,7 @@ This example demonstrates usage of CRCSCAN peripheral to perform CRC operation o
 
 <p align="center">
   <img width=750 height=auto src="images/Block_diagram.png">
-  <br><strong>Fig 1:Block diagram view of the system used for CRCSCAN on Flash memory<br>
+  <br>Fig 1:Block diagram view of the system used for CRCSCAN on Flash memory<br>
 </p>
 
 In this example,
@@ -46,14 +46,14 @@ In this example,
 
 <p align="center">
   <img width=400 height=auto src="images/Firmware_Flowchart.png">
-  <br><strong>Fig 2 : Application Code Flow diagram<br>
+  <br>Fig 2 : Application Code Flow diagram<br>
 </p>
 
 ## Software Used
 - Atmel Studio 7.0.2397 [link](https://www.microchip.com/mplab/avr-support/atmel-studio-7 "link")
 - AVR/GNU C Compiler [link](https://www.microchip.com/mplab/avr-support/avr-and-arm-toolchains-c-compilers "link")
 - Atmel START [link](https://www.microchip.com/mplab/avr-support/atmel-start "link")
-- AVR-Dx DFP 1.2.56
+- AVR-Dx DFP 1.3.67 [link](http://packs.download.atmel.com/ "link")
 - Standalone Data Visualizer v2.20.674 [link](https://www.microchip.com/mplab/avr-support/data-visualizer "link")
 
 **Note:** *For running the demo, the installed tool versions should be same or later.*
@@ -65,7 +65,7 @@ In this example,
 
 <p align="center">
   <img width=auto height=auto src="images/CuriosityNanoKit.png">
-  <br><strong>Fig 3 : AVR128DA48 Curiosity Nano Evaluation Kit<br>
+  <br>Fig 3 : AVR128DA48 Curiosity Nano Evaluation Kit<br>
 </p>
 
 ## Hardware setup
@@ -80,7 +80,7 @@ Connect AVR128DA48 Curiosity Nano board to Host Computer (PC) using standard mic
 
 <p align="center">
   <img width=auto height=auto src="images/postbuildcommand1.png">
-  <br><strong>Fig 4 : Post-build event command line window for 16-bit CRC<br>
+  <br>Fig 4 : Post-build event command line window for 16-bit CRC<br>
 </p>
 
 **Note** : For **32-bit CRC** use the following post-build command.
@@ -95,7 +95,7 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 
 <p align="center">
   <img width=auto height=auto src="images/Memorysettingswinodw.png">
-  <br><strong>Fig 5 : Memory settings window<br>
+  <br>Fig 5 : Memory settings window<br>
 </p>
 
 5.	Build the solution by clicking on ![](images/build_icon.png) **Build** icon and make sure build is successful without any errors.
@@ -105,7 +105,7 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 
 <p align="center">
   <img width=auto height=auto src="images/FuseSettingswindow.png">
-  <br><strong>Fig 6 : Fuses configuration<br>
+  <br>Fig 6 : Fuses configuration<br>
 </p>
 
 7.	Go to **Tools** -> **Device Programming**.
@@ -113,28 +113,28 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 
 <p align="center">
   <img width=auto height=auto src="images/toolselection.png">
-  <br><strong>Fig 7 : Tool selecting window<br>
+  <br>Fig 7 : Tool selecting window<br>
 </p>
 
 9.	Go to **Production file** tab and browse the **_crc.hex** file from the project folder by clicking on browse(…) button in Flash as shown in Fig 8. Check the **Flash** and **Fuses** option and click on **Save** button.
 
 <p align="center">
   <img width=auto height=auto src="images/productionfile1.png">
-   <br><strong>Fig 8 : Device programming window<br>
+   <br>Fig 8 : Device programming window<br>
 </p>
 
 10.	**Save As** window pops up , enter the file name, for example : crc16 saved in .elf format as shown in Fig 9 , which includes Fuses configuration in this file.
 
 <p align="center">
   <img width=auto height=auto src="images/Savesawindow.png">
-  <br><strong>Fig 9 : Save As window<br>
+  <br>Fig 9 : Save As window<br>
 </p>
 
 11.	Go to **Production file** tab and browse the **crc16.elf** file ,which is saved in Debug folder of the project by clicking on browse(…) option as shown in Fig 10. Check the **Flash** and **Fuses** option and click on **Program** button.
 
 <p align="center">
   <img width=auto height=auto src="images/productionfile2.png">
-  <br><strong>Fig 10 : Device programming window<br>
+  <br>Fig 10 : Device programming window<br>
 </p>
 
 ## Demo Operation
@@ -145,28 +145,28 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 
 <p align="center">
   <img width=auto height=auto src="images/Datavisualizer.png">
-  <br><strong>Fig 11 : Standalone Data Visualizer window<br>
+  <br>Fig 11 : Standalone Data Visualizer window<br>
 </p>
 
 2 .Once programming is completed, terminal window starts displaying the messages as shown in Fig 12.
 
 <p align="center">
   <img width=auto height=auto src="images/demo1.png">
-  <br><strong>Fig 12 : Initial status on Terminal window<br>
+  <br>Fig 12 : Initial status on Terminal window<br>
 </p>
 
 3.CRCSCAN starts after 8 sec. Status is printed on terminal window as shown in Fig 13.
 
 <p align="center">
   <img width=auto height=auto src="images/demo2.png">
-  <br><strong>Fig 13 : CRCSCAN status on Terminal window<br>
+  <br>Fig 13 : CRCSCAN status on Terminal window<br>
 </p>
 
 4. Press Switch (SW0) to change a byte at location “0x1FC01”in the Flash memory to 0x00 as shown in Fig 14.
 
 <p align="center">
   <img width=auto height=auto src="images/demo3.png">
-  <br><strong>Fig 14 : Switch press event<br>
+  <br>Fig 14 : Switch press event<br>
 </p>
 
 5.	Subsequent CRC scan will result in a CRC failure as shown in Fig 15 and LED0 on AVR DA Curiosity Nano board turns ON.
@@ -174,21 +174,21 @@ This command keeps the application code at 0x400 location in the Flash memory. I
 
 <p align="center">
   <img width=auto height=auto src="images/demo4.png">
-  <br><strong>Fig 15 : Subsequent scan result on Terminal window<br>
+  <br>Fig 15 : Subsequent scan result on Terminal window<br>
 </p>
 
 6.	Press Switch (SW0) again to change data back to 0XFF, at location “0x1FC01”in the Flash memory as shown in Fig 16.
 
 <p align="center">
   <img width=auto height=auto src="images/demo5.png">
-  <br><strong>Fig 16 : Switch press event<br>
+  <br>Fig 16 : Switch press event<br>
 </p>
 
 7.	Subsequent CRC scan will result in CRC success as shown in Fig 17 and LED0 on AVR DA Curiosity Nano board turns OFF.
 
 <p align="center">
   <img width=auto height=auto src="images/demo6.png">
-   <br><strong>Fig 17 : Subsequent scan result on terminal window<br>
+   <br>Fig 17 : Subsequent scan result on terminal window<br>
 </p>
 
 **Note:** Clean the project before programming the   _crc.hex file as explained in Device Programming section.
