@@ -4,17 +4,17 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.studio.project.avr128da48-crc-scan-on-flash-memory-studio",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "displayName": "CRC Scan on Flash memory Studio example",
         "projectName": "avr128da48-crc-scan-on-flash-memory-studio",
         "shortDescription": "This example demonstrates usage of Cyclic Redundancy Check Memory Scan (CRCSCAN) peripheral to perform CRC operation on the Flash memory and Nonvolatile Memory Controller (NVMCTRL) peripheral to perform read and write operations on the Flash memory in runtime.",
         "ide": {
-            "name": "Studio",
+            "name": "STUDIO",
             "semverRange": ">=7.0.2397"
         },
         "compiler": [
 			{
-				"name": "Avr-Gcc",
+				"name": "AVR GCC",
 				"semverRange": "^5.4.0"
 			}
 		],
@@ -32,7 +32,7 @@
             "content": {
                 "metaDataVersion": "1.0.0",
                 "category": "com.microchip.device",
-                "name": "avr128da48",
+                "name": "AVR128DA48",
                 "versionRange": "*"
             }
         },
@@ -40,23 +40,20 @@
         "subcategories": [
             "START",
             [
-               "Peripherals", "CRCSCAN"
+               "Peripherals", "CRC"
             ],
             [
-               "Peripherals", "NVMCTRL"
+               "Peripherals", "NVM"
             ],
 			[
                "Peripherals", "RTC"
             ],
 			[
                "Peripherals", "USART"
-            ],
-			[
-               "Peripherals", "GPIO"
             ]
         ],
         "peripherals": [
-            "CRCSCAN","NVMCTRL","RTC","USART","GPIO"
+            "CRC","NVM","RTC","USART"
         ],
         "keywords": [
             "Flash",
