@@ -39,6 +39,9 @@
         "author": "Microchip",
         "subcategories": [
             "START",
+			"Security",
+			"Communications",
+			"Functional Safety",
             [
                "Peripherals", "CRC"
             ],
