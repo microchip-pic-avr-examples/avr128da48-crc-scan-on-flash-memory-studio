@@ -1,7 +1,7 @@
 <!-- Please do not change this html logo with link -->
 <a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
-# CRC SCAN ON FLASH MEMORY
+# CRC Scan on Flash memory - Studio project
   
 Cyclic Redundancy Check Memory Scan (CRCSCAN) peripheral  is a Core Independent Peripheral (CIP) which can be configured to run without any intervention from the CPU after initialization. CRCSCAN peripheral is used to detect faults in the target section of the Flash and to ensure no code corruption has occurred in Flash memory. 
 
